@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechPilot - Gaming Gear & Accessories</title>
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+
+    <!-- Bootstrap 5 CDN Links -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- Custom File's Link -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive-style.css" />
+  </head>
+
+  <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
+    <!-- Navbar section -->
+    <%- include('includes/navbar') %>
+
+    <!-- Banner section -->
+    <section id="home" class="banner_wrapper wrapper">
+      <div class="container position-relative">
+        <div class="vertical-text">PREMIUM GAMING GEAR</div>
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-lg-0 mb-5">
+            <div class="banner_content">
+              <h1>Welcome to TechPilot</h1>
+              <h4>Unleash Your Gaming Potential with TechPilot</h4>
+              <p>
+                Discover the ultimate gaming experience with TechPilot's premium
+                gear and accessories. Elevate your gameplay and dominate the
+                competition.
+              </p>
+              <a href="/listings" class="banner-btn">
+                <i class="fas fa-gamepad"></i> Explore Our Products
+              </a>
+              <div class="hero-badges">
+                <span class="badge">
+                  <i class="fas fa-shield-alt"></i>
+                  Trusted by Gamers Worldwide
+                </span>
+                <span class="badge">
+                  <i class="fas fa-trophy"></i>
+                  Pro Gamer Approved
+                </span>
+                <span class="badge">
+                  <i class="fas fa-bolt"></i>
+                  Premium Quality
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div>
+              <img
+                src="./images/top-banner-img/mouse.png"
+                class="img-fluid ms-xl-5"
+                alt="Gaming Mouse"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Banner section exit -->
+
+    <!-- About section -->
+    <section id="about" class="about_wrapper wrapper">
+      <div class="container">
+        <div class="section-title text-center mb-5">
+          <h2>
+            About
+            <span class="highlight">TechPilot</span>
+          </h2>
+          <div class="title-design">
+            <span class="line"></span>
+            <i class="fas fa-gamepad"></i>
+            <span class="line"></span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 mb-lg-0 mb-5">
+            <div class="position-relative">
+              <img
+                src="./images/about/about-banner1.png"
+                alt="#"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="common-card">
+              <div class="card-icon">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <h4>Our Mission</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Recusandae, modi animi officiis totam soluta deleniti. Accusamus
+                nulla ea, praesentium beatae quas illo. Deserunt omnis expedita
+                doloribus assumenda mollitia. Perferendis, natus.
+              </p>
+            </div>
+            <div class="hero-badges flex-wrap justify-content-start">
+              <div class="badge">
+                <i class="fas fa-check-circle"></i>
+                Premium Quality Products
+              </div>
+              <div class="badge">
+                <i class="fas fa-check-circle"></i>
+                24/7 Customer Support
+              </div>
+              <div class="badge">
+                <i class="fas fa-check-circle"></i>
+                Fast Worldwide Shipping
+              </div>
+              <div class="badge">
+                <i class="fas fa-check-circle"></i>
+                5 Years Warrenty
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About section exit -->
+
+    <!-- Product section -->
+    <section id="products" class="products_wrapper wrapper">
+      <div class="container">
+        <div class="section-title text-center mb-5">
+          <h2>Featured <span class="highlight"> Gaming Gear</span></h2>
+          <div class="title-design">
+            <span class="line"></span>
+            <i class="fas fa-keyboard"></i>
+            <span class="line"></span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card text-center p3">
+              <div class="product-img mb-4">
+                <img src="./images/products/1.png" alt="#" class="img-fluid" />
+              </div>
+              <div class="text-center mb-4">
+                <p>Gaming</p>
+                <h5>POR X WIRELESS</h5>
+                <h6>Gaming Headset With Blue Vo!CE</h6>
+                <a href="#" class="main-btn mt-4">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card text-center p3">
+              <div class="product-img mb-4">
+                <img src="./images/products/2.png" alt="#" class="img-fluid" />
+              </div>
+              <div class="text-center mb-4">
+                <p>Office & Others</p>
+                <h5>STREAMCAM</h5>
+                <h6>Premium Webcam For Streaming</h6>
+                <a href="#" class="main-btn mt-4">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card text-center p3">
+              <div class="product-img mb-4">
+                <img src="./images/products/3.png" alt="#" class="img-fluid" />
+              </div>
+              <div class="text-center mb-4">
+                <p>Gaming</p>
+                <h5>LOGITECH G502</h5>
+                <h6>High Perrformance Mouse</h6>
+                <a href="#" class="main-btn mt-4">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card text-center p3">
+              <div class="product-img mb-4">
+                <img src="./images/products/4.webp" alt="#" class="img-fluid" />
+              </div>
+              <div class="text-center mb-4">
+                <p>Gaming</p>
+                <h5>LINES OF DHAKA</h5>
+                <h6>GAMING MOUSE PAD</h6>
+                <a href="#" class="main-btn mt-4">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Products section Exit -->
+
+    <!-- Ads section -->
+    <div class="ads_wrapper wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div>
+                <h2>Ultimet Gaming Bundle</h2>
+                <p class="discount my-5">Save 30%</p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Tempora suscipit, molestiae nam aliquid tenetur quia autem
+                  quas optio voluptates doloremque sequi amet quo veritatis,
+                  consectetur ullam dolore vitae animi quis.
+                </p>
+                <a href="#products" class="main-btn mt-4">Shop Now</a>
+              </div>
+              <div class="ad-image col-lg-4">
+                <img
+                  src="./images/ads/bundle-keyboard.png"
+                  alt=""
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Ads Section Exit  -->
+
+    <!-- Services section -->
+    <section id="services" class="services_wrapper wrapper">
+      <div class="container">
+        <div class="section-title text-center mb-5">
+          <h2>We Provide High Tech <span class="highlight">Products!</span></h2>
+          <div class="title-design">
+            <span class="line"></span>
+            <i class="fas fa-shield-alt"></i>
+            <span class="line"></span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="common-card">
+              <div class="card-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h4>Lifetime Guarantee</h4>
+              <p>
+                We stand behind our products with comprehensive warrenty
+                coverage.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="common-card">
+              <div class="card-icon">
+                <i class="fas fa-tags"></i>
+              </div>
+              <h4>Good Price</h4>
+              <p>Compeitive pricing withtout compromiseing on quality.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="common-card">
+              <div class="card-icon">
+                <i class="fas fa-download"></i>
+              </div>
+              <h4>Free Updates</h4>
+              <p>Get free software & free updates for lifetime.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="common-card">
+              <div class="card-icon">
+                <i class="fas fa-headset"></i>
+              </div>
+              <h4>24/7 Support</h4>
+              <p>Round tthe clock customer support for all needs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services section Exit -->
+
+    <!-- Facts section -->
+    <section id="facts" class="facts_wrapper wrapper">
+      <div class="container">
+        <div class="section-title text-center mb-5">
+          <h2>Our <span class="highlight">Stats</span></h2>
+          <div class="title-design">
+            <span class="line"></span>
+            <i class="fas fa-chart-bar"></i>
+            <span class="line"></span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card commmon-card text-center">
+              <div class="fact-icon">
+                <i class="fas fa-project-diagram"></i>
+              </div>
+              <div>
+                <h3>300+</h3>
+                <p>Projects</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card commmon-card text-center">
+              <div class="fact-icon">
+                <i class="fas fa-star"></i>
+              </div>
+              <div>
+                <h3>8.9</h3>
+                <p>Rating</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card commmon-card text-center">
+              <div class="fact-icon">
+                <i class="fas fa-user"></i>
+              </div>
+              <div>
+                <h3>3000+</h3>
+                <p>Customers</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card commmon-card text-center">
+              <div class="fact-icon">
+                <i class="fas fa-user-astronaut"></i>
+              </div>
+              <div>
+                <h3>23</h3>
+                <p>Team Membes</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Facts section Exit -->
+
+    <!-- Footer section -->
+    <%- include('includes/footer') %>
+    <!-- Bootstrap 5 JS CDN Links -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Js Link -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
