@@ -1,16 +1,15 @@
 ## ⚙️ Installation & Setup
 
 ### 1️⃣ Clone the Repository
-open cmd 
-git clone https://github.com/Mahi-rejone/Web-Project.git
-cd Web-Project
-### 2️⃣ Install Dependencies
-npm install
-### 3️⃣ Setup Database
-Create a MySQL database
-Update database credentials in your project
-Run:
-node init/setupDatabase.js
-### 4️⃣ Start the Server
-node server.js
-http://localhost:3000
+open cmd <br/>
+git clone https://github.com/Mahi-rejone/Web-Project.git<br/>
+cd Web-Project<br/>
+### 2️⃣ Install Dependencies<br/>
+npm install<br/>
+### 3️⃣ Setup Database<br/>
+Create a MySQL database<br/>
+Update database credentials in your project<br/>
+Run: node init/setupDatabase.js<br/>
+### 4️⃣ Start the Server<br/>
+node server.js<br/>
+http://localhost:3000<br/>
