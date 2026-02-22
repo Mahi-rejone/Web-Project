@@ -61,6 +61,10 @@
   .services_wrapper .card {
     padding: 1.85rem;
   }
+  /* review */
+  .review-img-main {
+    width: 100%;
+  }
 }
 @media (max-width: 767.5px) {
   /* custom css */
@@ -89,6 +93,10 @@
   }
   .wrapper {
     padding-bottom: 0%;
+  }
+  /* review */
+  .review-img-main {
+    width: 100%;
   }
 }
 

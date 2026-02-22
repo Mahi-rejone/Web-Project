@@ -320,9 +320,9 @@ p {
   font-weight: 700;
 }
 .products_wrapper .product-img img {
-  width: 100%;    
-  height: 200px;      
-  object-fit: cover; 
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
   border-radius: 0.5rem;
 }
 .ads_wrapper .card {
@@ -362,6 +362,129 @@ p {
 .services_wrapper .common-card:hover {
   transform: translateY(-0.7rem);
 }
+
+/* reviews*/
+.review_wrapper {
+  background: var(--bg-black-secondry);
+}
+.review-icon-slide {
+  position: relative;
+}
+.review-top {
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  transform: translateX(-50%) rotate(90deg);
+  position: absolute;
+  height: 2.5rem;
+  width: 2.5rem;
+  left: 50%;
+  top: -41px;
+}
+.review-top i {
+  color: var(--bg-black);
+}
+.review-bottom {
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  transform: translateX(-50%) rotate(90deg);
+  position: absolute;
+  height: 2.5rem;
+  bottom: -2.56rem;
+  width: 2.5rem;
+  left: 50%;
+}
+
+.review-bottom i {
+  color: var(--bg-black);
+}
+.review-top:hover,
+.review-bottom:hover {
+  background-color: var(--bg-white);
+}
+.review-slider {
+  position: relative;
+  overflow: hidden;
+}
+.chain {
+  transform: translateX(50%);
+  position: absolute;
+  left: 50%;
+  top: 0;
+}
+
+.chain img {
+  height: 55.5rem;
+}
+.review-item {
+  padding: 1.88rem;
+}
+.slick-center .review-item .review-img {
+  background-color: #cccccc;
+  transform: scale(1.6);
+}
+
+.slick-center .review-item .review-overlay {
+  height: 0;
+  width: 0;
+}
+.review-img {
+  background-color: var(--bg-black-secondry);
+  border-radius: 50%;
+  transition: all linear 0.3s;
+  overflow: hidden;
+  position: relative;
+  height: 6.25rem;
+  width: 6.25rem;
+}
+
+.review-img img {
+  padding-top: 0.8rem;
+}
+.review-overlay {
+  background-color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.review-text {
+  align-items: center;
+  display: flex;
+}
+
+.wrapper-text {
+  background-color: var(--bg-dark-light);
+  border-radius: 0.3rem;
+  position: relative;
+  padding: 3.75rem 2rem;
+  margin: 0.3rem 1.25rem;
+  z-index: 1;
+}
+.review-star-icon {
+  padding-bottom: 1rem;
+}
+
+.review-star-icon i {
+  color: var(--primary-color);
+}
+.para-text {
+  padding-right: 120px;
+}
+.review-shape {
+  background: rgb(29, 29, 29);
+  border-radius:0.65rem;
+  transform: translateY(-50%) rotate(45deg);
+  position: absolute;
+  z-index: -1;
+  height: 3.15rem;
+  width: 3.15rem;
+  left: -0.70rem;
+  top: 50%;
+}
+
+
+
 /*facts*/
 .facts_wrapper .card {
   height: 15rem;
