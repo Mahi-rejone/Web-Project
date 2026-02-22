@@ -1,0 +1,32 @@
+/* .message-table {
+  display: flex;
+  justify-content: center;
+} */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1a1a1a;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 1rem;
+  text-align: left;
+}
+
+th {
+  background: #00ff37;
+  color: black;
+}
+td {
+  color: white;
+}
+tr:nth-child(even) {
+  background: #222;
+}
+
+tr:hover {
+  background: #333;
+}

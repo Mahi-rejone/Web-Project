@@ -22,6 +22,7 @@ async function setDataBase() {
     await connection.query(`DROP TABLE IF EXISTS product_details`);
     await connection.query(`DROP TABLE IF EXISTS messages`);
     await connection.query(`DROP TABLE IF EXISTS products`);
+    await connection.query(`DROP TABLE IF EXISTS reviews`);
     console.log("✅ Existing tables dropped");
     //Create products table
     await connection.query(`
@@ -55,6 +56,15 @@ async function setDataBase() {
             )
         `);
     console.log("✅ Messages table created");
+    // //Create Review Table
+    // await connection.query(`
+    //         CREATE TABLE reviews (
+    //             id INT AUTO_INCREMENT PRIMARY KEY,
+    //             user  VARCHAR(100) NOT NULL,
+    //             review TEXT NOT NULL
+    //         )
+    //     `);
+    // console.log("✅ Review table created");
     // Insert products
     for (const product of sampleData.products) {
       await connection.query(
@@ -82,7 +92,16 @@ async function setDataBase() {
       ]);
     }
     console.log(`✅ ${sampleData.messages.length} messages inserted`);
-  } catch (error){
+
+    // // Insert reviews
+    // for (const review of sampleData.reviews) {
+    //   await connection.query(
+    //     "INSERT INTO reviews (user, review) VALUES (?, ?)",
+    //     [review.user, review.review],
+    //   );
+    // }
+    console.log(`✅ ${sampleData.messages.length} messages inserted`);
+  } catch (error) {
     console.error("❌ Error setting up database:", error.message);
   } finally {
     if (connection) {

@@ -325,6 +325,17 @@ p {
   object-fit: cover;
   border-radius: 0.5rem;
 }
+.product-slider .slick-slide {
+  height: auto;
+}
+
+.product-slider .card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .ads_wrapper .card {
   display: flex;
   align-items: center;

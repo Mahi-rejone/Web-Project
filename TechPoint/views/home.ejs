@@ -166,59 +166,22 @@
             <span class="line"></span>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-3 col-md-6 mb-4">
-            <div class="card text-center p3">
-              <div class="product-img mb-4">
-                <img src="./images/products/1.png" alt="#" class="img-fluid" />
-              </div>
-              <div class="text-center mb-4">
-                <p>Gaming</p>
-                <h5>POR X WIRELESS</h5>
-                <h6>Gaming Headset With Blue Vo!CE</h6>
-                <a href="#" class="main-btn mt-4">Read More</a>
-              </div>
+        <div class="row product-slider">
+          <% listings.forEach(listing => { %>
+            <div class="mb-4 ">
+            <div class="card text-center p-3">
+                <div class="product-img mb-4">
+                <img src="<%= listing.image_url %>" alt="<%= listing.name %>" class="img-fluid" />
+                </div>
+                <div class="text-center mb-4">
+                <p><%= listing.category %></p>
+                <h5><%= listing.name %></h5>
+                <h6><%= listing.short_description %></h6>
+                <a href="/listings/<%= listing.product_code %>" class="main-btn mt-4">Read More</a>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-4">
-            <div class="card text-center p3">
-              <div class="product-img mb-4">
-                <img src="./images/products/2.png" alt="#" class="img-fluid" />
-              </div>
-              <div class="text-center mb-4">
-                <p>Office & Others</p>
-                <h5>STREAMCAM</h5>
-                <h6>Premium Webcam For Streaming</h6>
-                <a href="#" class="main-btn mt-4">Read More</a>
-              </div>
             </div>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-4">
-            <div class="card text-center p3">
-              <div class="product-img mb-4">
-                <img src="./images/products/3.png" alt="#" class="img-fluid" />
-              </div>
-              <div class="text-center mb-4">
-                <p>Gaming</p>
-                <h5>LOGITECH G502</h5>
-                <h6>High Perrformance Mouse</h6>
-                <a href="#" class="main-btn mt-4">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 mb-4">
-            <div class="card text-center p3">
-              <div class="product-img mb-4">
-                <img src="./images/products/4.webp" alt="#" class="img-fluid" />
-              </div>
-              <div class="text-center mb-4">
-                <p>Gaming</p>
-                <h5>LINES OF DHAKA</h5>
-                <h6>GAMING MOUSE PAD</h6>
-                <a href="#" class="main-btn mt-4">Read More</a>
-              </div>
-            </div>
-          </div>
+        <% }) %>
         </div>
       </div>
     </section>
@@ -402,7 +365,6 @@
                   </picture>
                 </div>
                 <div class="main-review-slider">
-                  <!--js class maybe -->
                   <div class="review-item d-flex justify-content-center">
                     <div class="review-img">
                       <picture>

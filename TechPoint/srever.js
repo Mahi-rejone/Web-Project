@@ -29,8 +29,9 @@ app.use(methodOverride("_method"));
 app.engine("ejs", ejsMate);
 
 //routes
-app.get("/", (req, res) => {
-  res.render("home");
+app.get("/", async (req, res) => {
+  const [allListings] = await connection.execute("SELECT * FROM products");
+  res.render("home", { listings: allListings });
 });
 
 //show all
@@ -79,6 +80,30 @@ app.post("/listings", async (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(500).send("Error inserting product");
+  }
+});
+//Route to handle massage submission
+app.post("/message", async (req, res) => {
+  try {
+    const{ message } = req.body;
+    await connection.execute(
+      `INSERT INTO  messages (message) VALUES (?)`,
+      [message],
+    );
+    res.json({message: "Message is send succrssfully!"});
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Error sending message");
+  }
+});
+//Route to show massage 
+app.get("/message", async (req, res) => {
+  try {
+    const [allmessages] = await connection.execute("SELECT * FROM messages");
+    res.render("message", { messages: allmessages });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Error fetching message");
   }
 });
 
