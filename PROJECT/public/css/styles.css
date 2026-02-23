@@ -3,20 +3,75 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Plus Jakarta Sans", sans-serif ;
 }
-:root{
-    --text-black : #222222 ;
-    
-    --bg-white : #ffffff;
-}
+:root {
+  --text-black: #222222;
+  --text-highlight:#fe303c;
 
+  --bg-gray: #ebebeb;
+  --bg-white: #ffffff;
+}
+.card{
+    border: none !important;  
+}
+.card:hover{
+    transform: translateY(-0.6rem);
+}
+.card .card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important ;
+    height: 20rem;
+}
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: var(--bg-white);
+}
+.highlight{
+    color: var(--text-highlight) !important;
+}
 /* Navbar Css */
-.navbar{
-    height: 5rem;
+.navbar {
+  height: 5rem;
 }
-.navbar .nav-logo{
-    height: 4rem;
+.navbar .nav-logo {
+  height: 4rem;
 }
-.nav-link{
-    color:var(--text-black) !important ;
+.nav-link {
+  color: var(--text-black) !important ;
+}
+/* Footer Style */
+.f-info-links,
+.f-info-social,
+.f-info-brand {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.f-info-social i {
+  font-size: 1.2rem;
+  gap: 2rem;
+}
+.f-info-links a {
+  text-decoration: none;
+  color: var(--text-black);
+  gap: 2rem;
+}
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+.f-info {
+  text-align: center;
+  display: flex;
+  height: 8rem;
+  background-color: var(--bg-gray);
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
