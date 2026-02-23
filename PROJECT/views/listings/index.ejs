@@ -1,22 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Listings</title>
-</head>
-<body>
-    <h2>
-        All listings
-    </h2>
-     <form method="get" action="/listings/new">
-        <button type="submit">Create New Listing</button>
-     </form> 
+<% layout("/layouts/boilerplate") %>
+<h2> All listings</h2>
     <ul>
-        <% listings.forEach(listing => { %>
+        <% listings.forEach(listing=> { %>
             <li><a href="/listings/<%= listing._id %>"><%= listing.title %></a></li>
         <% }) %>
     </ul>
-
-</body>
-</html>
