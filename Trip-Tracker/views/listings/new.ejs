@@ -1,25 +1,38 @@
 <% layout("/layouts/boilerplate") %>
-
-    <form method="post" action="/listings">
+<div class="newlisting_wrapper wrapper">
+    <form method="post" action="/listings" class="needs-validation" novalidate>
         <h1>Create New Listing</h1>
-        <label for="title">Title:</label><br>
-        <input type="text" id="title" name="listing[title]" required><br><br>
-
-        <label for="description">Description:</label><br>
-        <textarea id="description" name="listing[description]" rows="4" cols="50" required></textarea><br><br>
-
-        <label for="image">Image URL:</label><br>
-        <input type="text" id="image" name="listing[image]"><br><br>
-
-        <label for="price">Price (in BDT):</label><br>
-        <input type="number" id="price" name="listing[price]" required><br><br>
-
-        <label for="location">Location:</label><br>
-        <input type="text" id="location" name="listing[location]" required><br><br>
-
-        <label for="country">Country:</label><br>
-        <input type="text" id="country" name="listing[country]" required><br><br>
-
-        <button type="submit">Create Listing</button>
+        <div class="row col-lg-8">
+            <div class="offset-2">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title:</label><br>
+                    <input type="text" id="title" class="form-control" name="listing[title]" required>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description:</label><br>
+                    <textarea id="description" class="form-control" name="listing[description]" rows="4" cols="50"
+                        required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Image URL:</label><br>
+                    <input type="text" id="image" class="form-control" name="listing[image]">
+                </div>
+                <div class="row ">
+                    <div class="col-lg-4 mb-3">
+                        <label for="price" class="form-label">Price (in BDT):</label><br>
+                        <input type="number" id="price" class="form-control" name="listing[price]" required>
+                    </div>
+                    <div class="col-lg-8 mb-3">
+                        <label for="location" class="form-label">Location:</label><br>
+                        <input type="text" id="location" class="form-control" name="listing[location]" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="country" class="form-label">Country:</label><br>
+                    <input type="text" id="country" class="form-control" name="listing[country]" required>
+                </div>
+                <button class="addnew-btn btn btn-dark" type="submit">Create Listing</button>
+            </div>
+        </div>
     </form>
-
+</div>    

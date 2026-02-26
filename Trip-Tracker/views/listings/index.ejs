@@ -1,19 +1,42 @@
 <% layout("/layouts/boilerplate") %>
-<h2> All listings</h2>
-<div class="row">
-    <% listings.forEach(listing=> { %>
-        <div class="card col-lg-3 col-md-6 mb-4">
-            <img src="<%= listing.image %>" class="card-img-top" alt="listing_img">
-            <div class="card-img-overlay"></div>
-            <div class="card-body">
-                <h5 class="card-title"><%= listing.title %></h5>
-                <p class="card-text"><%= listing.description %> Some quick example text to build on the card title.
-                </p>
-                <h6>
-                    Price: &#2547;<%= listing.price.toLocaleString("en-IN") %>    
-                </h6>
-                <a href="/listings/<%= listing.id %>" class="btn btn-primary">Show</a>
-            </div>
-        </div>     
-    <% }) %>
-</div>
+    <div class="wrapper">
+        <h2> All listings</h2>
+        <div class="row">
+            <% listings.forEach(listing=> { %>
+
+                <div class="col-lg-3 col-md-6 mb-4 d-flex">
+
+                    <div class="card listing-card w-100" onclick="window.location='/listings/<%= listing.id %>'">
+
+                        <div class="position-relative">
+                            <img src="<%= listing.image %>" class="card-img-top" alt="listing_img">
+
+                            <div class="card-img-overlay"></div>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%= listing.title %>
+                            </h5>
+
+                            <p class="card-text">
+                                <%= listing.description %>
+                            </p>
+
+                            <h6>
+                                Price: &#2547;<%= listing.price.toLocaleString("en-IN") %>
+                            </h6>
+
+                            <a href="/listings/<%= listing.id %>" class="btn btn-primary">
+                                Show
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <% }) %>
+        </div>
+    </div>

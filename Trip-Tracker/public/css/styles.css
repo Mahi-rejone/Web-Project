@@ -3,36 +3,66 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Plus Jakarta Sans", sans-serif ;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 :root {
   --text-black: #222222;
-  --text-highlight:#fe303c;
+  --text-highlight: #fe424d;
 
   --bg-gray: #ebebeb;
   --bg-white: #ffffff;
 }
-.card{
-    border: none !important;  
+html,
+body {
+  height: 100%;
+  margin: 0;
 }
-.card:hover{
-    transform: translateY(-0.6rem);
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
-.card .card-img-top{
-    border-radius: 1rem !important;
-    width: 100% !important;
-    object-fit: cover !important ;
-    height: 20rem;
+
+.wrapper {
+  padding: 3rem 0;
 }
-.card-img-overlay{
-    opacity: 0;
+/* Cards */
+.card {
+  border: none !important;
+  height: 100%;
 }
-.card-img-overlay:hover{
-    opacity: 0.2;
-    background-color: var(--bg-white);
+.listing-card:hover {
+  transform: translateY(-0.6rem);
 }
-.highlight{
-    color: var(--text-highlight) !important;
+.card .card-img-top {
+  border-radius: 1rem !important;
+  width: 100% !important;
+  object-fit: cover !important ;
+  height: 20rem;
+}
+.card-img-overlay {
+  opacity: 0;
+}
+.card-img-overlay:hover {
+  opacity: 0.2;
+  background-color: var(--bg-white);
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body a {
+  margin-top: auto;
+}
+/* Button styling*/
+.addnew-btn,
+.edit-btn {
+  background-color: var(--text-highlight) !important;
+  border: none !important;
+}
+
+.highlight {
+  color: var(--text-highlight) !important;
 }
 /* Navbar Css */
 .navbar {
@@ -44,6 +74,22 @@
 .nav-link {
   color: var(--text-black) !important ;
 }
+/* Show Page */
+.show-img {
+  height: 30vh;
+}
+.show-btns {
+  margin-left: 1rem;
+  display: flex;
+  gap: 2rem;
+}
+.show-wrapper ul {
+  list-style: none;
+  padding: 0 0.2rem;
+}
+
+/* index page  */
+
 /* Footer Style */
 .f-info-links,
 .f-info-social,
