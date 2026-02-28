@@ -1,52 +1,4 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TechPilot - Gaming Gear & Accessories</title>
-
-    <!-- FAVICON -->
-    <link rel="icon" type="image/png" href="images/favicon.png" />
-
-    <!-- Bootstrap 5 CDN Links -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
-    />
-    <!-- Font-Awesome CDN Link -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!-- Slick CDN Link -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
-      integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
-    <!-- Custom File's Link -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive-style.css" />
-  </head>
-
-  <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
-    <!-- Navbar section -->
-    <%- include('includes/navbar') %>
-
+<% layout("/layouts/boilerplate") %>
     <!-- Banner section -->
     <section id="home" class="banner_wrapper wrapper">
       <div class="container position-relative">
@@ -82,11 +34,7 @@
           </div>
           <div class="col-lg-6">
             <div>
-              <img
-                src="./images/top-banner-img/mouse.png"
-                class="img-fluid ms-xl-5"
-                alt="Gaming Mouse"
-              />
+              <img src="./images/top-banner-img/mouse.png" class="img-fluid ms-xl-5" alt="Gaming Mouse" />
             </div>
           </div>
         </div>
@@ -111,11 +59,7 @@
         <div class="row">
           <div class="col-lg-6 mb-lg-0 mb-5">
             <div class="position-relative">
-              <img
-                src="./images/about/about-banner1.png"
-                alt="#"
-                class="img-fluid"
-              />
+              <img src="./images/about/about-banner1.png" alt="#" class="img-fluid" />
             </div>
           </div>
           <div class="col-lg-6">
@@ -167,21 +111,27 @@
           </div>
         </div>
         <div class="row product-slider">
-          <% listings.forEach(listing => { %>
+          <% listings.forEach(listing=> { %>
             <div class="mb-4 ">
-            <div class="card text-center p-3">
+              <div class="card text-center p-3">
                 <div class="product-img mb-4">
-                <img src="<%= listing.image_url %>" alt="<%= listing.name %>" class="img-fluid" />
+                  <img src="<%= listing.image_url %>" alt="<%= listing.name %>" class="img-fluid" />
                 </div>
                 <div class="text-center mb-4">
-                <p><%= listing.category %></p>
-                <h5><%= listing.name %></h5>
-                <h6><%= listing.short_description %></h6>
-                <a href="/listings/<%= listing.product_code %>" class="main-btn mt-4">Read More</a>
+                  <p>
+                    <%= listing.category %>
+                  </p>
+                  <h5>
+                    <%= listing.name %>
+                  </h5>
+                  <h6 class="s_discription">
+                    <%= listing.short_description %>
+                  </h6>
+                  <a href="/listings/<%= listing.product_code %>" class="main-btn mt-4">Read More</a>
                 </div>
+              </div>
             </div>
-            </div>
-        <% }) %>
+            <% }) %>
         </div>
       </div>
     </section>
@@ -205,11 +155,7 @@
                 <a href="#products" class="main-btn mt-4">Shop Now</a>
               </div>
               <div class="ad-image col-lg-4">
-                <img
-                  src="./images/ads/bundle-keyboard.png"
-                  alt=""
-                  class="img-fluid"
-                />
+                <img src="./images/ads/bundle-keyboard.png" alt="" class="img-fluid" />
               </div>
             </div>
           </div>
@@ -287,7 +233,7 @@
         </div>
         <div class="row">
           <div class="col-md-3 col-sm-6 mb-4">
-            <div class="card commmon-card text-center">
+            <div class="card common-card text-center">
               <div class="fact-icon">
                 <i class="fas fa-project-diagram"></i>
               </div>
@@ -298,7 +244,7 @@
             </div>
           </div>
           <div class="col-md-3 col-sm-6 mb-4">
-            <div class="card commmon-card text-center">
+            <div class="card common-card text-center">
               <div class="fact-icon">
                 <i class="fas fa-star"></i>
               </div>
@@ -309,7 +255,7 @@
             </div>
           </div>
           <div class="col-md-3 col-sm-6 mb-4">
-            <div class="card commmon-card text-center">
+            <div class="card common-card text-center">
               <div class="fact-icon">
                 <i class="fas fa-user"></i>
               </div>
@@ -320,7 +266,7 @@
             </div>
           </div>
           <div class="col-md-3 col-sm-6 mb-4">
-            <div class="card commmon-card text-center">
+            <div class="card common-card text-center">
               <div class="fact-icon">
                 <i class="fas fa-user-astronaut"></i>
               </div>
@@ -349,30 +295,22 @@
         <div class="row">
           <div class="col-lg-2 col-md-3 col-sm-3 review-img-main">
             <div class="review-icon-slide">
-              <div
-                class="review-top d-none d-lg-flex justify-content-center align-items-center"
-              >
+              <div class="review-top d-none d-lg-flex justify-content-center align-items-center">
                 <i class="fa-solid fa-angle-left"></i>
               </div>
               <div class="review-slider">
                 <div class="chain d-none d-lg-block">
                   <picture>
-                    <img
-                      src="/images/review/review-chain.png"
-                      alt="review-chain"
-                      class="lazyload"
-                    /><!--js class maybe -->
+                    <img src="/images/review/review-chain.png" alt="review-chain"
+                      class="lazyload" /><!--js class maybe -->
                   </picture>
                 </div>
                 <div class="main-review-slider">
                   <div class="review-item d-flex justify-content-center">
                     <div class="review-img">
                       <picture>
-                        <img
-                          src="images/review/review-img2.png"
-                          alt="review-img2.png"
-                          class="w-100 img-fluid lazyload"
-                        />
+                        <img src="images/review/review-img2.png" alt="review-img2.png"
+                          class="w-100 img-fluid lazyload" />
                       </picture>
                       <div class="review-overlay"></div>
                     </div>
@@ -380,11 +318,7 @@
                   <div class="review-item d-flex justify-content-center">
                     <div class="review-img">
                       <picture>
-                        <img
-                          src="images/review/review-img3.png"
-                          alt="review-img3"
-                          class="w-100 img-fluid lazyload"
-                        />
+                        <img src="images/review/review-img3.png" alt="review-img3" class="w-100 img-fluid lazyload" />
                       </picture>
                       <div class="review-overlay"></div>
                     </div>
@@ -392,11 +326,7 @@
                   <div class="review-item d-flex justify-content-center">
                     <div class="review-img">
                       <picture>
-                        <img
-                          src="images/review/review-img4.png"
-                          alt="review-img3"
-                          class="w-100 img-fluid lazyload"
-                        />
+                        <img src="images/review/review-img4.png" alt="review-img3" class="w-100 img-fluid lazyload" />
                       </picture>
                       <div class="review-overlay"></div>
                     </div>
@@ -404,20 +334,14 @@
                   <div class="review-item d-flex justify-content-center">
                     <div class="review-img">
                       <picture>
-                        <img
-                          src="images/review/review-img1.png"
-                          alt="review-img1"
-                          class="w-100 img-fluid lazyload"
-                        />
+                        <img src="images/review/review-img1.png" alt="review-img1" class="w-100 img-fluid lazyload" />
                       </picture>
                       <div class="review-overlay"></div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div
-                class="review-bottom d-none d-lg-flex justify-content-center align-items-center"
-              >
+              <div class="review-bottom d-none d-lg-flex justify-content-center align-items-center">
                 <i class="fa-solid fa-angle-right"></i>
               </div>
             </div>
@@ -535,28 +459,7 @@
     </section>
 
     <!-- Review Secion Exit -->
-    <!-- Footer section -->
-    <%- include('includes/footer') %>
 
+</body>
 
-    <!-- JS Bootstrap CDN Links -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- JQuery CDN Links -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <!-- Slick CDN Links -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"
-      integrity="sha512-eP8DK17a+MOcKHXC5Yrqzd8WI5WKh6F1TIk5QZ/8Lbv+8ssblcz7oGC8ZmQ/ZSAPa7ZmsCU4e/hcovqR8jfJqA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <!-- Custom Js Link -->
-    <script src="js/main.js"></script>
-    <script src="/js/slick.js"></script>
-  </body>
 </html>

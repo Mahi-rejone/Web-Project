@@ -2,7 +2,7 @@ $(".main-review-slider").slick({
   slidesToShow: 3,
   slidesToScroll: 1,
   arrows: true,
-  autoplay:true,
+  autoplay: true,
   autoplaySpeed: 2000,
   prevArrow: ".review-top",
   nextArrow: ".review-bottom",
@@ -88,12 +88,12 @@ $(".main-text").slick({
     },
   ],
 });
-$('.product-slider').slick({
+$(".product-slider").slick({
   infinite: true,
   speed: 300,
   slidesToShow: 4,
   slidesToScroll: 1,
-  autoplay:true,
+  autoplay: false,
   autoplaySpeed: 2000,
   pauseOnHover: true,
   responsive: [
@@ -103,22 +103,22 @@ $('.product-slider').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
         infinite: true,
-        dots: true
-      }
+        dots: true,
+      },
     },
     {
       breakpoint: 600,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 1
-      }
+        slidesToScroll: 1,
+      },
     },
     {
       breakpoint: 480,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-  ]
+        slidesToScroll: 1,
+      },
+    },
+  ],
 });
