@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = 8080;
 const path = require("path");
 const mongoose = require("mongoose");
 const dbURL = "mongodb://127.0.0.1:27017/TripTracker";

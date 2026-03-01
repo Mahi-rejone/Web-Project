@@ -102,8 +102,10 @@ h1 {
   margin-bottom: 1.25rem;
   font-family: var(--secondary-font);
   background: linear-gradient(45deg, var(--bg-white), var(--primary-color));
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  color: transparent; /* fallback for browsers that don't support webkit */
+  background-clip: text; /* standard property for future-proof */
+  -webkit-background-clip: text; /* Safari/Chrome */
+  -webkit-text-fill-color: transparent; /* Safari/Chrome */
   text-shadow: 0 0 1.42rem rgba(0, 255, 55, 0.3);
 }
 h2 {
@@ -144,6 +146,7 @@ p {
   font-weight: 400;
   color: var(--text-light);
   line-height: 1.625rem;
+  margin-bottom: 0;
 }
 .wrapper {
   padding: 5.25rem 0;
@@ -615,4 +618,9 @@ p {
 .footer_wrapper .copyright-section a {
   color: var(--text-white);
   font-weight: 600;
+}
+/* Edit page */
+.form-control ,#status{
+  background-color: var(--bg-dark-light);
+  color: var(--bg-white);
 }
