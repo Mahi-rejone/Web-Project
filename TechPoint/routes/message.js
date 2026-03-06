@@ -1,38 +1,19 @@
 const express = require("express");
 const router = express.Router();
-const { getConnection } = require("../db");
+const wrapAsync = require("../util/wrapAsync");
 
-// Connection middleware - ATTACH DB TO EVERY REQUEST
-router.use((req, res, next) => {
-  try {
-    req.db = getConnection();
-    next();
-  } catch (err) {
-    next(err);
-  }
-});
+// POST /message - send a message
+router.post("/", wrapAsync(async (req, res) => {
+  const { message } = req.body;
+  await req.db.query(`INSERT INTO messages (message) VALUES ($1)`, [message]);
+  req.flash("success", "Message Sent successfully!");
+  res.redirect("/");
+}));
 
-//send message
-router.post("/", async (req, res) => {
-  try {
-    const { message } = req.body;
-    await req.db.query(`INSERT INTO messages (message) VALUES ($1)`, [message]);
-    res.json({ message: "Message sent successfully!" });
-  } catch (err) {
-    console.error(err);
-    res.status(500).send("Error sending message");
-  }
-});
-
-//show messages
-router.get("/", async (req, res) => {
-  try {
-    const result = await req.db.query("SELECT * FROM messages");
-    res.render("message", { messages: result.rows });
-  } catch (err) {
-    console.error(err);
-    res.status(500).send("Error fetching message");
-  }
-});
+// GET /message - show all messages
+router.get("/", wrapAsync(async (req, res) => {
+  const result = await req.db.query("SELECT * FROM messages ORDER BY created_at DESC");
+  res.render("message", { messages: result.rows });
+}));
 
 module.exports = router;

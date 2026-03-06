@@ -13,18 +13,13 @@
         <div class="contact-info col-md-6">
           <ul class="list-unstyled">
             <li>
-              <a href=""
-                ><i class="fa fa-home me-3"></i
-                >Ovijan:17,Auchpara,Tongi,Gazipur</a
-              >
+              <a href=""><i class="fa fa-home me-3"></i>Ovijan:17,Auchpara,Tongi,Gazipur</a>
             </li>
             <li>
               <a href=""><i class="fa fa-phone me-3"></i>01812116611</a>
             </li>
             <li>
-              <a href=""
-                ><i class="fa fa-envelope me-3"></i>Mahirejone@gmail.com</a
-              >
+              <a href=""><i class="fa fa-envelope me-3"></i>Mahirejone@gmail.com</a>
             </li>
           </ul>
         </div>
@@ -41,14 +36,16 @@
       </div>
       <div class="col-lg-5 col-md-6 mb-4">
         <h5 class="mb-4">Newsletter</h5>
-        <div class="input-group mb-5">
-          <input
-            type="text"
-            class="form-control message-input"
-            placeholder="Enter Your Massage"
-          />
-          <button class="btn main-btn message-submit" type="button">Submit</button>
-        </div>
+        <form action="/message" method="POST">
+          <div class="input-group mb-5">
+            <input type="text" name="message" class="form-control message-input" placeholder="Enter Your Message"
+              required />
+
+            <button class="btn main-btn message-submit" type="submit">
+              Submit
+            </button>
+          </div>
+        </form>
         <h5>Stay Conneced</h5>
         <ul class="Social-Network d-flex align-items-center p-0 list-unstyled">
           <li>

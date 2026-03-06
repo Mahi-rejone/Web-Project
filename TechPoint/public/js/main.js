@@ -17,8 +17,8 @@ navbar.forEach((a) => {
     navCollapse.classList.remove("show");
   });
 });
-//call btn functiom
 
+//call btn functiom
 window.addEventListener("DOMContentLoaded", () => {
   const callBtn = document.querySelector(".call-btn");
   const isMobile =
@@ -32,29 +32,6 @@ window.addEventListener("DOMContentLoaded", () => {
     callBtn.target = "_blank"; // <-- open in new tab/window
     callBtn.rel = "noopener noreferrer"; // <-- security best practice
   }
-});
-
-//message btn
-const message_btn = document.querySelector(".message-submit");
-const input = document.querySelector(".message-input");
-message_btn.addEventListener("click", async () => {
-  const message = input.value.trim();
-  if (message === "") {
-    alart("Please enter a message");
-  } else {
-    const response = await fetch("/message", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ message }),
-    });
-
-    // parse JSON response from server
-    const data = await response.json();
-    alert(data.message); 
-  }
-  input.value = "";
 });
 
 //form validation 
