@@ -221,7 +221,7 @@ p {
 .header_wrapper .nav-item .nav-link:hover {
   color: var(--primary-text);
 }
-.nav-btn .swing {
+.banner-btn .swing {
   animation: shake 1s ease infinite;
 }
 @keyframes shake {

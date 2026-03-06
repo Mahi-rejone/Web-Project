@@ -56,8 +56,8 @@ message_btn.addEventListener("click", async () => {
   }
   input.value = "";
 });
-//form validation 
 
+//form validation 
 (function () {
   'use strict'
 

@@ -73,6 +73,9 @@ const sampleData = {
         'Do you have student discounts?',
         'Is the ring light dimmable?',
         'Can I use the capture card with OBS?'
+    ],
+    user:[
+        ['Mahi Rejone', 'mahirejone@gmail.com','$2a$13$CDRZxmCA/w/FpVobx2RSMOBCyPt45aOUww5ZEitug3DTsPQE5IzL2' , 'https://scontent.fdac134-1.fna.fbcdn.net/v/t39.30808-1/583538155_1582533586508152_4067330714339813455_n.jpg?stp=c387.666.789.790a_dst-jpg_s200x200_tt6&_nc_cat=104&ccb=1-7&_nc_sid=1d2534&_nc_ohc=XESzNRG_-pYQ7kNvwHre-9Z&_nc_oc=AdmU1-Pfm2MSHMnU3sOw4GJD_YAgrwhlBefwyMG4bdKVHKjFVaKJy1x_U-N_VUf4RN0&_nc_zt=24&_nc_ht=scontent.fdac134-1.fna&_nc_gid=z1jLmxPD3QbMSKpLrIYlnQ&_nc_ss=8&oh=00_Afwu-YRQwfnvBfy35mEor2TBSo-kUjKIMLzBmzt2t34isg&oe=69B07BA0']
     ]
 };
 

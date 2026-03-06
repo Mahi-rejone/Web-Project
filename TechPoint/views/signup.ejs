@@ -1,0 +1,44 @@
+<% layout("/layouts/boilerplate") %>
+    <div class="login_wrapper wrapper">
+        <form method="POST" action="/signup" class="needs-validation" novalidate>
+
+            <div class="container">
+                <h1 class="mb-4">SIGN UP</h1>
+
+                <div class="row"> 
+                    <div class="col-lg-8 mx-auto">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">
+                                <p>Name:</p>
+                            </label>
+                            <input type="text" class="form-control" id="name" name="user[name]" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">
+                                <p>Email:</p>
+                            </label>
+                            <input type="text" class="form-control" id="email" name="user[email]" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="image_url" class="form-label">
+                                <p>Image URL:</p>
+                            </label>
+                            <input type="text" id="image_url" class="form-control" name="user[image_url]">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">
+                                <p>Password:</p>
+                            </label>
+                            <input type="password" class="form-control" id="password" name="user[password]" required>
+                        </div>
+                        <button class="main-btn btn btn-dark" type="submit">
+                            SIGN UP
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+    </div>

@@ -36,13 +36,13 @@ app.get("/", (req, res) => {
 });
 
 // Route to display all listings
-app.get("/listings", async (req, res) => {
+app.get("/listings", async (req, res, next) => {
   try {
     const alllistings = await Listing.find();
-    res.render("listings/index", { listings: alllistings }); // Removed .ejs extension
+    res.render("listings/index", { listings: alllistings });
   } catch (error) {
     console.error("Error fetching listings:", error);
-    next(error); // Pass to error handler instead of sending JSON
+    next(error);
   }
 });
 
