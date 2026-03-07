@@ -5,15 +5,8 @@
       <a class="navbar-brand" href="/">
         <img src="/images/logo.png" alt="TechPilot Logo" class="img-fluid" />
       </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -36,11 +29,45 @@
           <li class="nav-item">
             <a class="nav-link" href="/#contact">Contact</a>
           </li>
-          <li class="nav-link nav-item">
-            <a href="tel:+8801812116611" class="main-btn nav-btn">
-              <i class=" fa-solid fa-user me-2"></i> Log In
-            </a>
-          </li>
+          
+          <!-- User authentication section -->
+          <% if (currentUser) { %>
+            <!-- User dropdown for logged in users -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="<%= currentUser.image_url || '/images/default-avatar.png' %>" 
+                     alt="<%= currentUser.name %>" 
+                     class="rounded-circle me-2" 
+                     style="width: 30px; height: 30px; object-fit: cover;">
+                <span><%= currentUser.name %></span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                <li>
+                  <span class="dropdown-item-text text-muted small">
+                    <i class="fas fa-user me-2"></i><%= currentUser.email %>
+                  </span>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <a class="dropdown-item" href="/user/profile">
+                    <i class="fas fa-id-card me-2"></i>Profile
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/user/logout">
+                    <i class="fas fa-sign-out-alt me-2"></i>Logout
+                  </a>
+                </li>
+              </ul>
+            </li>
+          <% } else { %>
+            <!-- Login button for guests -->
+            <li class="nav-item">
+              <a href="/user/login" class="main-btn nav-btn">
+                <i class="fa-solid fa-user me-2"></i> Log In
+              </a>
+            </li>
+          <% } %>
         </ul>
       </div>
     </div>

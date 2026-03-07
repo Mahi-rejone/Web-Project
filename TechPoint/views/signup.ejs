@@ -1,6 +1,6 @@
 <% layout("/layouts/boilerplate") %>
-    <div class="login_wrapper wrapper">
-        <form method="POST" action="/signup" class="needs-validation" novalidate>
+    <div class="signup_wrapper wrapper">
+        <form method="POST" action="/user/signup" class="needs-validation" novalidate>
 
             <div class="container">
                 <h1 class="mb-4">SIGN UP</h1>
@@ -30,6 +30,12 @@
                                 <p>Password:</p>
                             </label>
                             <input type="password" class="form-control" id="password" name="user[password]" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password2" class="form-label">
+                                <p>Password:</p>
+                            </label>
+                            <input type="password" class="form-control" id="password2" name="user[password2]" required>
                         </div>
                         <button class="main-btn btn btn-dark" type="submit">
                             SIGN UP
